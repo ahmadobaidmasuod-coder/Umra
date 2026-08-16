@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "checkJs": false
+  },
+  "include": [
+    "db/**/*.ts",
+    "drizzle.config.ts",
+    "worker/**/*.js",
+    "public/**/*.js",
+    "scripts/**/*.mjs"
+  ],
+  "exclude": ["node_modules"]
+}
