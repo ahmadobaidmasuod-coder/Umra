@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Umrah Operations Bridge",
+  "version": "0.1.0",
+  "description": "منفذ آمن للأوامر داخل جلسة نسك الخاصة بالموظف.",
+  "permissions": ["storage", "tabs", "windows", "offscreen", "alarms", "scripting"],
+  "host_permissions": ["https://*.nusuk.sa/*", "http://localhost:3000/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "content_scripts": [{ "matches": ["https://*.nusuk.sa/*"], "js": ["content.js"], "run_at": "document_start" }],
+  "action": { "default_title": "Umrah Operations Bridge" }
+}
