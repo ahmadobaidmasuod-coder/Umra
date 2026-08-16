@@ -1,7 +1,9 @@
 import { defineConfig } from "drizzle-kit";
 
 export default defineConfig({
-  out: "./drizzle",
-  schema: "./db/schema.ts",
-  dialect: "sqlite",
+  schema: "./shared/schema.ts",
+  out: "./migrations",
+  dialect: "postgresql",
+  dbCredentials: { url: process.env.DATABASE_URL ?? "postgres://umrah:umrah@localhost:5432/umrah_ops" },
+  strict: true,
 });

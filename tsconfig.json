@@ -1,24 +1,23 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "strict": true,
-    "noEmit": true,
+    "jsx": "react-jsx",
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "skipLibCheck": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "checkJs": false
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["shared/*"],
+      "@server/*": ["server/*"],
+      "@client/*": ["client/src/*"],
+      "@extension/*": ["extension/*"]
+    },
+    "types": ["node", "vitest/globals", "chrome"]
   },
-  "include": [
-    "db/**/*.ts",
-    "drizzle.config.ts",
-    "worker/**/*.js",
-    "public/**/*.js",
-    "scripts/**/*.mjs"
-  ],
-  "exclude": ["node_modules"]
+  "include": ["shared", "server", "client", "extension", "tests", "drizzle.config.ts", "vitest.config.ts"]
 }
